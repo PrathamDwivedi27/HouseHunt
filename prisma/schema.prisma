@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId //string type ka hona chahiye auto generate hona chahiye bydefaul _id is naam se generate hota hai to hum log ki user id ko usse map kardo 
+  email     String   @unique
+  password  String
+  username  String   @unique
+  avatar    String?                     //ho bhi sakta hai nhi bhi 
+  createdAt DateTime @default(now())
+}
+
+//after every changes do npx prisma db push
