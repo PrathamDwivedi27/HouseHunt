@@ -23,4 +23,4 @@ My experience with Househunt has been largely positive. The platform is an excel
 
 I would highly recommend Househunt to anyone in the market for a new home!
 
---- 
+--- goods
